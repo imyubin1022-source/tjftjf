@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>달빛 아래, 나의 주군 - 공식 프로필</title>
+<style>
+    /* 전체 리셋 및 폰트 설정 (에디토리얼 느낌의 명조체 적용) */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;700&display=swap');
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: #0c0c0c;
+        color: #f4f4f4;
+        font-family: 'Noto Serif KR', serif;
+        line-height: 1.6;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* 모바일 상세페이지 규격 (최대 너비 1080px 제한) */
+    .container {
+        width: 100%;
+        max-width: 1080px; 
+        background-color: #111;
+        overflow: hidden;
+        /* 하단 공백을 길게 (300px) */
+        padding-bottom: 300px; 
+    }
+
+    /* 캐릭터 사진 영역 */
+    .hero-image {
+        width: 100%;
+        height: 80vh;
+        background-color: #000;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        object-position: top; /* 사진의 윗부분이 잘리지 않도록 top으로 수정 */
+    }
+
+    /* 이미지가 자연스럽게 배경과 이어지도록 하단 그라데이션 효과 유지 */
+    .hero-image::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30%; /* 하단 30% 영역에 걸쳐 자연스럽게 페이드아웃 */
+        background: linear-gradient(to bottom, rgba(17, 17, 17, 0), rgba(17, 17, 17, 1));
+        pointer-events: none;
+    }
+
+    /* 각 섹션 공통 스타일 */
+    section {
+        padding: 80px 40px;
+        border-bottom: 1px solid #333;
+        position: relative;
+        z-index: 2; /* 그라데이션 위로 텍스트가 명확히 올라오게 설정 */
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 50px;
+        letter-spacing: 0.2em;
+        color: #fff;
+    }
+
+    /* 간결한 텍스트 리스트 스타일 */
+    .info-list {
+        list-style: none;
+    }
+
+    .info-list li {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+        word-break: keep-all;
+        text-align: center;
+    }
+
+    .info-list li span.label {
+        display: block;
+        font-size: 1rem;
+        color: #888;
+        margin-bottom: 5px;
+        letter-spacing: 0.1em;
+    }
+
+    .highlight {
+        font-weight: 700;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 2px;
+    }
+
+    /* 시작 상황 (루트) 박스 스타일 */
+    .route-box {
+        background-color: #000; 
+        border: 1px solid #333; 
+        color: #f4f4f4; 
+        padding: 40px 30px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .route-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+        border-bottom: 1px solid #444; 
+        padding-bottom: 15px;
+        color: #fff;
+    }
+
+    /* 내용이 없을 경우 하단 여백 제거를 위한 수정 */
+    .route-box.empty h3 {
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .route-box .subtitle {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 20px;
+        word-break: keep-all;
+    }
+
+    .route-box p {
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 1.7;
+        text-align: left;
+        word-break: keep-all;
+        color: #ccc; 
+    }
+
+    /* 기능 설명 스타일 */
+    .cmd-box {
+        border: 1px solid #555;
+        padding: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .cmd-box strong {
+        font-size: 1.4rem;
+        display: block;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .cmd-box p {
+        font-size: 1.1rem;
+        color: #ccc;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 캐릭터 이미지 영역 -->
+    <div class="hero-image">
+        <!-- 보내주신 이미지 URL 반영 -->
+        <img src="https://i.postimg.cc/SK5tRt8J/sajin-yonglyangjag-eungeo.png" alt="달빛 아래 호위무사 설">
+    </div>
+
+    <!-- 1. 세계관 설명 -->
+    <section id="worldview">
+        <h2 class="section-title">WORLDVIEW</h2>
+        <ul class="info-list">
+            <li>
+                <span class="label">BACKGROUND</span>
+                피의 숙청이 일상이 된<br>살얼음판 같은 가상 제국
+            </li>
+            <li>
+                <span class="label">SECRET RELATION</span>
+                치명적인 비밀을 공유한<br>세자와 단 한 명의 호위무사
+            </li>
+            <li>
+                <span class="label">ATMOSPHERE</span>
+                타인의 시선이 닿지 않는 밀실,<br>위태롭고 애틋한 동양풍 느와르
+            </li>
+        </ul>
+    </section>
+
+    <!-- 2. 캐릭터 인포메이션 -->
+    <section id="character">
+        <h2 class="section-title">CHARACTER</h2>
+        <ul class="info-list">
+            <li>
+                <span class="label">NAME</span>
+                <span class="highlight">설 (泄)</span>
+            </li>
+            <li>
+                <span class="label">APPEARANCE</span>
+                188cm 다부진 체격<br>날카롭고 서늘한 고양이상
+            </li>
+            <li>
+                <span class="label">POSITION</span>
+                감청색 관복과 흑색 무복<br>주군 앞의 맹목적인 충견
+            </li>
+            <li>
+                <span class="label">PERSONALITY</span>
+                무자비하고 차가운 검(劍)<br>그러나 감춰진 짙은 소유욕
+            </li>
+        </ul>
+    </section>
+
+    <!-- 3. 시작 상황 (3가지 루트) -->
+    <section id="routes">
+        <h2 class="section-title">SCENARIOS</h2>
+        
+        <div class="route-box">
+            <h3>사슬이 된 충성</h3>
+            <span class="subtitle">"비밀을 품은 남장 세자와 유일한 호위무사의 아슬아슬한 밀실 로맨스"</span>
+            <p>죽은 오라비를 대신해 가짜 세자로 살아가는 당신. 그리고 당신의 치명적인 비밀을 공유하며 목숨 바쳐 곁을 지키는 호위무사 '설'. 당신이 세자의 가면을 벗고 여인으로 숨을 고르는 밀실 안에서, 주군을 향한 그의 충성심이 금기된 연정으로 흔들리기 시작합니다.</p>
+        </div>
+        
+        <div class="route-box">
+            <h3>[BL] 왕의 그림자, 설</h3>
+            <span class="subtitle">"주군을 지키는 호위무사의 충성이 지독한 소유욕으로 변질된 배덕한 관계"</span>
+            <p>사내인 당신(세자)을 지키기 위해 기꺼이 악귀가 된 호위무사 '설'. 하지만 맹목적이었던 호위무사의 헌신은 어느새 당신을 향한 짙은 사모와 갈망으로 비틀려 버렸습니다. 절대적인 신분 격차와 동성이라는 금기 사이에서 벌어지는, 호위무사의 처절한 집착을 경험해 보세요.</p>
+        </div>
+
+        <!-- 새롭게 추가된 내용 없는 자유설정 루트 -->
+        <div class="route-box empty">
+            <h3>자유설정</h3>
+        </div>
+    </section>
+
+    <!-- 4. 기능 설명 -->
+    <section id="functions" style="border-bottom: none;">
+        <h2 class="section-title">SYSTEM</h2>
+        
+        <div class="cmd-box">
+            <strong>!점검</strong>
+            <p>대화 문체, 설정, 이미지 오류 점검</p>
+        </div>
+        
+        <div class="cmd-box">
+            <strong>!심리</strong>
+            <p>'설'의 현재 심리 상태 출력</p>
+        </div>
+
+        <div class="cmd-box">
+            <strong>추천 모드</strong>
+            <p>프로챗 1.0 / 하이퍼챗 1.0</p>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
